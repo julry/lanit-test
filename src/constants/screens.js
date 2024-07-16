@@ -34,6 +34,8 @@ import q5_cor from "../assets/images/q5_answer.png";
 import q6_cor from "../assets/images/q6_cor.png";
 import q6_incor from "../assets/images/q6_incor.png";
 
+import final from "../assets/images/final.png";
+
 export const screens = [
     {
         id: 0,
@@ -97,4 +99,5 @@ export const screens = [
 export const preloadImages = [
     question1, q1, q1_cor, q1_incor, question2, q2, question3, q3, q3_cor,
     question4, q4, question5, q5, q5_cor, question6, q6, q6_cor, q6_incor,
+    final
 ];

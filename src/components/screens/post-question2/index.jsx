@@ -25,7 +25,7 @@ export const PostQuestion2 = () => {
 
     const pic = {
         src: pic2,
-        height: 330,
+        height: 345,
     } 
 
     return (

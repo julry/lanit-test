@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useProgress } from "../../contexts/ProgressContext";
 import { useSizeRatio } from "../../contexts/SizeRatioContext";
 import { Button } from "./button";
+import { ProgressBar } from "./progress-bar";
 import { CommonTitle } from "./text";
 
 const Wrapper = styled.div`
@@ -72,6 +73,7 @@ export const PostQuestionWrapper = ({ question, isCorrect, pic, children}) => {
     
     return (
         <Wrapper>
+            <ProgressBar currentLevel={question.id}/>
             <Picture $ratio={ratio} $height={pic?.height} $src={pic?.src}/>
             {children}
             <Content $ratio={ratio}>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useProgress } from "../../contexts/ProgressContext";
 import { useSizeRatio } from "../../contexts/SizeRatioContext";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
 import { Button } from "./button";
 import { ProgressBar } from "./progress-bar";
 import { CommonTitle } from "./text";
@@ -68,6 +69,7 @@ export const PostQuestionWrapper = ({ question, isCorrect, pic, children}) => {
     const { answerFont, correctAnswer, incorrectAnswer } = question;
 
     const handleNext = () => {
+        reachMetrikaGoal(`level${question.id}`);
         next();
     }
     

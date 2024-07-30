@@ -4,6 +4,7 @@ import { useSizeRatio } from "../../contexts/SizeRatioContext";
 import { Button } from "../shared/button";
 import { useProgress } from "../../contexts/ProgressContext";
 import { Logo } from "../shared/logo";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
 
 const Wrapper = styled.div`
     width: 100%;
@@ -30,6 +31,7 @@ export const Intro = () => {
     const { next } = useProgress();
 
     const handleNext = () => {
+        reachMetrikaGoal('start');
         next();
     }
 

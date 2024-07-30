@@ -4,6 +4,7 @@ import { useSizeRatio } from "../../contexts/SizeRatioContext";
 import { Button } from "../shared/button";
 import { useProgress } from "../../contexts/ProgressContext";
 import { Logo } from "../shared/logo";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
 
 const Wrapper = styled.div`
     width: 100%;
@@ -44,7 +45,8 @@ export const Final = () => {
     const { points } = useProgress();
 
     const handleOpen = () => {
-        
+        reachMetrikaGoal('calendar');
+        window.open('https://advent.lanit.ru/', '_blank');
     }
 
     return (
